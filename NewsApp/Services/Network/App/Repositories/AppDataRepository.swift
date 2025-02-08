@@ -8,7 +8,7 @@ final class AppDataRepository: AppRepository {
         self.remoteDataSource = remoteDataSource
     }
     
-    func getLatestNews() async throws -> NewsContainerModel {
-        try await remoteDataSource.getLatestNews()
+    func getLatestNews(nextPage: String?) async throws -> NewsContainerModel {
+        try await remoteDataSource.getLatestNews(nextPage: nextPage)
     }
 }

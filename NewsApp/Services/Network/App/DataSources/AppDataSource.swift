@@ -1,5 +1,5 @@
 import Foundation
 
 protocol AppDataSource {
-    func getLatestNews() async throws -> NewsContainerModel
+    func getLatestNews(nextPage: String?) async throws -> NewsContainerModel
 }

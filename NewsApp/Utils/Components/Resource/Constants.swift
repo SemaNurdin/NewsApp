@@ -3,6 +3,7 @@ import UIKit
 
 enum Constants {
     static var baseUrl = "https://newsdata.io"
+    static var apiKey = "pub_68447c7ebe3c5fe03f49bf9714e84f754e37a"
     
     enum UI {
         static let viewsTop: CGFloat = 16.adaptToScreenSize

@@ -8,18 +8,25 @@ final class NewsVM: ViewModelType {
     let successSubject = PassthroughSubject<Bool, Never>()
     let errorSubject = PassthroughSubject<String, Never>()
     
+    private var nextPage: String? = nil
     var news: [NewsModel] = []
+    var isFetching = false
     
     @MainActor
     func getLatestNews() {
+        guard !isFetching else { return }
+        isFetching = true
+        
         Task {
             do {
-                let res = try await app.getLatestNews()
-                news = res.results.toArray()
+                let res = try await app.getLatestNews(nextPage: nextPage)
+                news.append(contentsOf: res.results.toArray())
+                nextPage = res.nextPage
                 successSubject.send(true)
             } catch {
-                errorSubject.send(error.localizedDescription)
+                errorSubject.send("News limit reached!")
             }
+            isFetching = false
         }
     }
 }

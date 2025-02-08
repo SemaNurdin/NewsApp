@@ -33,6 +33,7 @@ final class NewsVC: BaseVC<NewsCV, NewsVM> {
             .sink { [weak self] error in
                 guard let self = self else { return }
                 self.dismissActivity()
+                self.presentToast(with: error, messageType: .error)
             }
             .store(in: &bag)
     }
@@ -47,6 +48,15 @@ extension NewsVC: UITableViewDataSource, UITableViewDelegate {
         let cell: NewsTVCell = tableView.dequeueReusableCell(for: indexPath)
         cell.setupWith(news: viewModel.news[indexPath.row])
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let frameHeight = scrollView.frame.size.height
+        if position > contentHeight - frameHeight * 2, !viewModel.isFetching {
+            viewModel.getLatestNews()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}

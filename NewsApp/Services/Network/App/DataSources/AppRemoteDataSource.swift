@@ -8,7 +8,7 @@ final class AppRemoteDataSource: AppDataSource {
         self.client = client
     }
     
-    func getLatestNews() async throws -> NewsContainerModel {
-        try await client.fetch(AppRequests.GetLatesNews())
+    func getLatestNews(nextPage: String?) async throws -> NewsContainerModel {
+        try await client.fetch(AppRequests.GetLatesNews(nextPage: nextPage))
     }
 }

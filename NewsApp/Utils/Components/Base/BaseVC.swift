@@ -35,3 +35,4 @@ class BaseVC<ContentView: Customizable, ViewModel: ViewModelType>: UIViewControl
 }
 
 extension BaseVC: ActivityPresentable {}
+extension BaseVC: ToastPresentable {}
