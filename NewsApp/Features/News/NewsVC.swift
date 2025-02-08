@@ -8,27 +8,44 @@ final class NewsVC: BaseVC<NewsCV, NewsVM> {
     override func setTargets() {
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presentActivity()
+        viewModel.getLatestNews()
+    }
+    
     override func setDelegates() {
         contentView.tableView.delegate = self
         contentView.tableView.dataSource = self
     }
-}
-
-// MARK: - Actions
-@objc extension NewsVC {
-    func onBackAction() {
-        viewModel.onBackAction?()
+    
+    override func addObservers() {
+        viewModel.successSubject
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+                self.dismissActivity()
+                self.contentView.tableView.reloadData()
+            }
+            .store(in: &bag)
+        
+        viewModel.errorSubject
+            .sink { [weak self] error in
+                guard let self = self else { return }
+                self.dismissActivity()
+            }
+            .store(in: &bag)
     }
 }
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension NewsVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.news.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: NewsTVCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setup()
+        cell.setupWith(news: viewModel.news[indexPath.row])
         return cell
     }
     

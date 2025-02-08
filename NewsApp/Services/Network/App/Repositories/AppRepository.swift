@@ -1,1 +1,3 @@
-protocol AppRepository {}
+protocol AppRepository {
+    func getLatestNews() async throws -> NewsContainerModel
+}

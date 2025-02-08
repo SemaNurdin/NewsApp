@@ -7,4 +7,8 @@ final class AppRemoteDataSource: AppDataSource {
     init(client: HTTPClient) {
         self.client = client
     }
+    
+    func getLatestNews() async throws -> NewsContainerModel {
+        try await client.fetch(AppRequests.GetLatesNews())
+    }
 }

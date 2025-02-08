@@ -33,3 +33,5 @@ class BaseVC<ContentView: Customizable, ViewModel: ViewModelType>: UIViewControl
     func localize() {}
     func addObservers() {}
 }
+
+extension BaseVC: ActivityPresentable {}

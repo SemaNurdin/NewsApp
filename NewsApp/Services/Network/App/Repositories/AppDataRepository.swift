@@ -7,4 +7,8 @@ final class AppDataRepository: AppRepository {
     public init(_ remoteDataSource: AppDataSource) {
         self.remoteDataSource = remoteDataSource
     }
+    
+    func getLatestNews() async throws -> NewsContainerModel {
+        try await remoteDataSource.getLatestNews()
+    }
 }

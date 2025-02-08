@@ -1,3 +1,4 @@
+import Kingfisher
 import UIKit
 
 final class NewsTVCell: TableViewCell<NewsTVCellCV> {
@@ -13,10 +14,12 @@ final class NewsTVCell: TableViewCell<NewsTVCellCV> {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup() {
-        mainContentView.titleLabel.text = "How to prepare for interview as an iOS developer?"
-        mainContentView.authorLabel.text = "Author: Nurdinov Syimyk Nurdinov Syimyk"
-        mainContentView.dateLabel.text = "Date: 12.01.2014"
-        mainContentView.previewImageView.image = UIImage(systemName: "photo")
+    func setupWith(news: NewsModel) {
+        mainContentView.titleLabel.text = news.title
+        mainContentView.authorLabel.text = "Author: \(news.sourceName ?? "Unknown author")"
+        mainContentView.dateLabel.text = "Date: \(news.pubDate)"
+        mainContentView.previewImageView.kf.setImage(with: URL(string: news.imageUrl ?? ""),
+                                                     placeholder: UIImage(systemName: "photo"))
+        
     }
 }

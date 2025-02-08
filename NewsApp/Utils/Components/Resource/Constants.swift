@@ -2,6 +2,8 @@ import CoreServices
 import UIKit
 
 enum Constants {
+    static var baseUrl = "https://newsdata.io"
+    
     enum UI {
         static let viewsTop: CGFloat = 16.adaptToScreenSize
         static let viewsLeadingTrailing: CGFloat = 16.adaptToScreenSize

@@ -1,3 +1,5 @@
 import Foundation
 
-protocol AppDataSource {}
+protocol AppDataSource {
+    func getLatestNews() async throws -> NewsContainerModel
+}
