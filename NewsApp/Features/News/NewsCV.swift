@@ -42,8 +42,8 @@ extension NewsCV: Customizable {
 private extension NewsCV {
     func makeTableView() -> TableView {
         let tableView = TableView(style: .plain,
-                                  backgroundColor: .black,
-                                  cells: [])
+                                  backgroundColor: .clear,
+                                  cells: [NewsTVCell.self])
         return tableView
     }
 }

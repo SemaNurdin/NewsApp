@@ -26,6 +26,10 @@ final class AppCoordinatorFactory: CoordinatorFactory {
         controller.tabBar.standardAppearance = tabBarAppearance
         controller.tabBar.scrollEdgeAppearance = tabBarAppearance
         
+        controller.tabBar.layer.borderWidth = 1
+        controller.tabBar.layer.borderColor = UIColor.black.cgColor
+        controller.tabBar.clipsToBounds = true
+        
         return (coordinator, controller)
     }
     

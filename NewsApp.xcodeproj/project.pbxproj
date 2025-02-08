@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B20CE4032D5730D700CDEFC9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE4022D5730D700CDEFC9 /* UIView+Extensions.swift */; };
 		B20CE4052D5731CD00CDEFC9 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE4042D5731CD00CDEFC9 /* ModuleBuilder.swift */; };
+		B20CE4092D573A8800CDEFC9 /* NewsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE4072D573A8800CDEFC9 /* NewsTVCell.swift */; };
+		B20CE40A2D573A8800CDEFC9 /* NewsTVCellCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20CE4082D573A8800CDEFC9 /* NewsTVCellCV.swift */; };
 		B2152B552D55CAFD004FD988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2152B542D55CAFD004FD988 /* AppDelegate.swift */; };
 		B2152B5E2D55CAFE004FD988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2152B5D2D55CAFE004FD988 /* Assets.xcassets */; };
 		B2152B612D55CAFE004FD988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2152B5F2D55CAFE004FD988 /* LaunchScreen.storyboard */; };
@@ -60,6 +62,8 @@
 /* Begin PBXFileReference section */
 		B20CE4022D5730D700CDEFC9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B20CE4042D5731CD00CDEFC9 /* ModuleBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		B20CE4072D573A8800CDEFC9 /* NewsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTVCell.swift; sourceTree = "<group>"; };
+		B20CE4082D573A8800CDEFC9 /* NewsTVCellCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTVCellCV.swift; sourceTree = "<group>"; };
 		B2152B512D55CAFD004FD988 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2152B542D55CAFD004FD988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2152B5D2D55CAFE004FD988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B20CE4062D573A7B00CDEFC9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B20CE4072D573A8800CDEFC9 /* NewsTVCell.swift */,
+				B20CE4082D573A8800CDEFC9 /* NewsTVCellCV.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B2152B482D55CAFD004FD988 = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +370,7 @@
 		B2152BE02D572B84004FD988 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				B20CE4062D573A7B00CDEFC9 /* Cell */,
 				B2152BE32D572BA9004FD988 /* NewsVC.swift */,
 				B2152BE42D572BA9004FD988 /* NewsCV.swift */,
 				B2152BE12D572BA9004FD988 /* NewsVM.swift */,
@@ -468,11 +482,13 @@
 				B2152BB52D55E39F004FD988 /* CoordinatorFactory.swift in Sources */,
 				B2152BBE2D55E483004FD988 /* Instructor.swift in Sources */,
 				B2152BDF2D56083B004FD988 /* UITabbarItem+Extensions.swift in Sources */,
+				B20CE40A2D573A8800CDEFC9 /* NewsTVCellCV.swift in Sources */,
 				B2152B962D55D43C004FD988 /* AppContainer.swift in Sources */,
 				B2152B6F2D55CCEA004FD988 /* Coordinator.swift in Sources */,
 				B2152BEC2D572F14004FD988 /* TableView.swift in Sources */,
 				B2152B552D55CAFD004FD988 /* AppDelegate.swift in Sources */,
 				B2152B822D55CF01004FD988 /* BaseNC.swift in Sources */,
+				B20CE4092D573A8800CDEFC9 /* NewsTVCell.swift in Sources */,
 				B2152B882D55CFDC004FD988 /* InitializeManager.swift in Sources */,
 				B2152BEE2D572F1F004FD988 /* TableViewCell.swift in Sources */,
 				B2152BDD2D55FD3D004FD988 /* MainNewsFactory.swift in Sources */,
@@ -646,9 +662,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.syimyk.newsapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -673,9 +693,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.syimyk.newsapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
