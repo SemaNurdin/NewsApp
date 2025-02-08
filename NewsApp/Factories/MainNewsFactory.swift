@@ -1,11 +1,11 @@
 import UIKit
 
 protocol MainNewsFactoryImpl {
-//    func makeDashboardVC() -> DashboardVC
+    func makeNewsVC() -> NewsVC
 }
 
 final class MainNewsFactory: MainNewsFactoryImpl {
-//    func makeDashboardVC() -> DashboardVC {
-//        DashboardBuilder().build()
-//    }
+    func makeNewsVC() -> NewsVC {
+        NewsBuilder().build()
+    }
 }

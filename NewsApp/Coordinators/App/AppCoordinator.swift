@@ -11,7 +11,7 @@ final class AppCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        runFlow()
+        runMainFlow()
     }
 
     private func runFlow() {
@@ -28,5 +28,6 @@ final class AppCoordinator: BaseCoordinator {
 
         addDependency(coordinator)
         router.setRootModule(module, hideBar: true)
+        coordinator.start()
     }
 }

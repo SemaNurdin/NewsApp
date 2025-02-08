@@ -10,7 +10,7 @@ final class AppCoordinatorFactory: CoordinatorFactory {
                                      image: UIImage(systemName: Constants.SystemImages.newspaper)!,
                                      selectedImage: UIImage(systemName: Constants.SystemImages.newspaperFill)!,
                                      tag: 0)
-        let secondController = makeNC(title: "Favorite News",
+        let secondController = makeNC(title: "Saved News",
                                       image: UIImage(systemName: Constants.SystemImages.newspaperCircle)!,
                                       selectedImage: UIImage(systemName: Constants.SystemImages.newspaperCircleFill)!,
                                       tag: 1)

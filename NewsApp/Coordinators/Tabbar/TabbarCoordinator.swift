@@ -26,12 +26,12 @@ class TabbarCoordinator: BaseCoordinator, TabbarCoordinatorResult {
     private func runMainNewsFlow() -> ((BaseNC) -> Void) {
         return { [unowned self] navController in
             if navController.viewControllers.isEmpty {
-                var homeCoordinator = self.coordinatorFactory.makeMainNewsCoordinator(navController: navController, mainRouter: mainRouter)
-                homeCoordinator.finishFlow = { [weak self] in
+                var mainNewsCoordinator = self.coordinatorFactory.makeMainNewsCoordinator(navController: navController, mainRouter: mainRouter)
+                mainNewsCoordinator.finishFlow = { [weak self] in
                     self?.finishFlow?()
                 }
-                self.addDependency(homeCoordinator)
-                homeCoordinator.start()
+                self.addDependency(mainNewsCoordinator)
+                mainNewsCoordinator.start()
             }
         }
     }

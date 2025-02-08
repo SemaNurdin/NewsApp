@@ -20,9 +20,7 @@ final class MainNewsCoordinator: BaseCoordinator, MainNewsCoordinatorResult {
     
     // MARK: - Run current flow's controllers
     private func showNewsVC() {
-//        let module = factory.makeDashboardVC()
-//        router.setRootModule(module, hideBar: true) {
-//            completion?()
-//        }
+        let module = factory.makeNewsVC()
+        router.setRootModule(module)
     }
 }
