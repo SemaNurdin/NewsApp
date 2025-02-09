@@ -8,7 +8,6 @@ extension SharedContainer {
     var client: Factory<HTTPClient> {
         self {
             let client = HTTPClient(baseURL: URL(string: Constants.baseUrl))
-            client.validators.append(ResponseLogValidator())
             return client
         }
         .singleton

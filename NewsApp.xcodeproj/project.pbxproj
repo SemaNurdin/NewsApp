@@ -88,7 +88,6 @@
 		B2ECAB8A2D576B470020CF64 /* CAGradientLayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAB862D576B470020CF64 /* CAGradientLayer+Extensions.swift */; };
 		B2ECAB8B2D576B470020CF64 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAB872D576B470020CF64 /* ActivityIndicatorView.swift */; };
 		B2ECAB8D2D576B730020CF64 /* InteractionBlockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAB8C2D576B730020CF64 /* InteractionBlockable.swift */; };
-		B2ECAB952D576EFA0020CF64 /* ResponseLogValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAB942D576EFA0020CF64 /* ResponseLogValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,7 +167,6 @@
 		B2ECAB862D576B470020CF64 /* CAGradientLayer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Extensions.swift"; sourceTree = "<group>"; };
 		B2ECAB872D576B470020CF64 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		B2ECAB8C2D576B730020CF64 /* InteractionBlockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionBlockable.swift; sourceTree = "<group>"; };
-		B2ECAB942D576EFA0020CF64 /* ResponseLogValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseLogValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,7 +308,6 @@
 			children = (
 				B27DC99B2D58D059005A9006 /* EmptyPlaceholderView.swift */,
 				B27DC9872D58987E005A9006 /* NavigationBar.swift */,
-				B2ECAB942D576EFA0020CF64 /* ResponseLogValidator.swift */,
 				B285AA952D5797930014FC98 /* Toast */,
 				B2ECAB832D576B470020CF64 /* ActivityIndicator */,
 				B2152B712D55CD9B004FD988 /* Resource */,
@@ -636,7 +633,6 @@
 				B285AAA32D57C4380014FC98 /* NewsDetailsVC.swift in Sources */,
 				B2152BBC2D55E3EC004FD988 /* TabbarCoordinatorResult.swift in Sources */,
 				B2ECAB892D576B470020CF64 /* ActivityIndicatorOverlayView.swift in Sources */,
-				B2ECAB952D576EFA0020CF64 /* ResponseLogValidator.swift in Sources */,
 				B285AAA12D57C4380014FC98 /* NewsDetailsVM.swift in Sources */,
 				B2152BAF2D55E202004FD988 /* AppCoordinator.swift in Sources */,
 				B2152BE62D572BA9004FD988 /* NewsBuilder.swift in Sources */,
