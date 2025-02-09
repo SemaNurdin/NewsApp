@@ -61,6 +61,7 @@
 		B2152BEC2D572F14004FD988 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2152BEB2D572F14004FD988 /* TableView.swift */; };
 		B2152BEE2D572F1F004FD988 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2152BED2D572F1F004FD988 /* TableViewCell.swift */; };
 		B27DC9882D58987E005A9006 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DC9872D58987E005A9006 /* NavigationBar.swift */; };
+		B27DC98A2D58AD06005A9006 /* RealmDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DC9892D58AD06005A9006 /* RealmDatabaseManager.swift */; };
 		B285AA752D57753C0014FC98 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B285AA742D57753C0014FC98 /* Kingfisher */; };
 		B285AA902D5788160014FC98 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B285AA8F2D5788160014FC98 /* Realm */; };
 		B285AA922D5788160014FC98 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B285AA912D5788160014FC98 /* RealmSwift */; };
@@ -135,6 +136,7 @@
 		B2152BEB2D572F14004FD988 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableView.swift; path = "../../../../Axel/step365-ios/Step365/Components/TableView.swift"; sourceTree = "<group>"; };
 		B2152BED2D572F1F004FD988 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B27DC9872D58987E005A9006 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		B27DC9892D58AD06005A9006 /* RealmDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmDatabaseManager.swift; sourceTree = "<group>"; };
 		B285AA932D5797210014FC98 /* ToastPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPresentable.swift; sourceTree = "<group>"; };
 		B285AA962D5797930014FC98 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		B285AA972D5797930014FC98 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				B2152B872D55CFDC004FD988 /* InitializeManager.swift */,
+				B27DC9892D58AD06005A9006 /* RealmDatabaseManager.swift */,
 				B20CE4132D5765DB00CDEFC9 /* Requests */,
 				B20CE40B2D5762B800CDEFC9 /* Models */,
 				B2152B972D55D518004FD988 /* Network */,
@@ -634,6 +637,7 @@
 				B2152BCD2D55E785004FD988 /* Int+Extensions.swift in Sources */,
 				B2152BA42D55D775004FD988 /* AppRepository.swift in Sources */,
 				B2ECAB802D576A950020CF64 /* RealmList+Extensions.swift in Sources */,
+				B27DC98A2D58AD06005A9006 /* RealmDatabaseManager.swift in Sources */,
 				B2152BBB2D55E3EC004FD988 /* TabbarView.swift in Sources */,
 				B2152BE72D572BA9004FD988 /* NewsVC.swift in Sources */,
 			);

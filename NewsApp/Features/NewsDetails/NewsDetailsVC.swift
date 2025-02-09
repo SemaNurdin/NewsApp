@@ -3,6 +3,9 @@ import UIKit
 
 final class NewsDetailsVC: BaseVC<NewsDetailsCV, NewsDetailsVM> {
     
+    private var newsSaved: Bool {
+        return viewModel.realmManager.getObject(for: NewsModel.self, primaryKey: viewModel.newsModel.articleId) != nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,10 +13,16 @@ final class NewsDetailsVC: BaseVC<NewsDetailsCV, NewsDetailsVM> {
     
     override func setTargets() {
         contentView.navigationBar.backButton.addTarget(self, action: #selector(onBackAction), for: .touchUpInside)
+        contentView.navigationBar.saveButton.addTarget(self, action: #selector(onSaveAction), for: .touchUpInside)
     }
     
     override func localize() {
         super.localize()
+        if newsSaved {
+            contentView.navigationBar.saveButton.setImage(UIImage(systemName: "arrow.down.square.fill"), for: .normal)
+        } else {
+            contentView.navigationBar.saveButton.setImage(UIImage(systemName: "arrow.down.square"), for: .normal)
+        }
         contentView.navigationBar.titleLabel.text = "News details"
         contentView.imageView.kf.setImage(with: URL(string: viewModel.newsModel.imageUrl ?? ""),
                                           placeholder: UIImage(systemName: "photo"))
@@ -41,9 +50,33 @@ final class NewsDetailsVC: BaseVC<NewsDetailsCV, NewsDetailsVM> {
         viewModel.onBackAction?()
     }
     
-    func onSaveAction() {}
+    func onSaveAction() {
+        if newsSaved {
+            if let savedNewsModel = viewModel.realmManager.getObject(for: NewsModel.self, primaryKey: viewModel.newsModel.articleId) {
+                let newsCopy = savedNewsModel.detached()
+                do {
+                    try self.viewModel.realmManager.delete(objects: [savedNewsModel])
+                    viewModel.newsModel = newsCopy // Update viewModel with safe copy
+                    presentToast(with: "Unsaved!", messageType: .success)
+                } catch {
+                    presentToast(with: "Error unsaving -- \(error.localizedDescription)!", messageType: .error)
+                }
+            } else {
+                presentToast(with: "Object not found!", messageType: .error)
+            }
+        } else {
+            do {
+                try viewModel.realmManager.save(objects: [viewModel.newsModel])
+                presentToast(with: "Saved!", messageType: .success)
+            } catch {
+                presentToast(with: "Error saving -- \(error.localizedDescription)!", messageType: .error)
+            }
+        }
+        localize()
+    }
+
     
-    @objc func handleTap(_ gesture: UITapGestureRecognizer) {
+    func handleTap(_ gesture: UITapGestureRecognizer) {
         guard let label = gesture.view as? UILabel else { return }
         
         // Check if the tap location is within the label's bounds
@@ -56,3 +89,6 @@ final class NewsDetailsVC: BaseVC<NewsDetailsCV, NewsDetailsVM> {
         }
     }
 }
+
+
+// 2c44ec71c4c6d4aad63ccbe56f284c73

@@ -53,6 +53,7 @@ extension NewsVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.onDetailsAction?(viewModel.news[indexPath.row])
+        let copy = viewModel.news[indexPath.row].detached()
+        viewModel.onDetailsAction?(copy)
     }
 }

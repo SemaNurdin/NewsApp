@@ -4,7 +4,7 @@ import UIKit
 final class NavigationBar: UIView {
     lazy var stackView = makeStackView()
     lazy var backButton = makeButton(with: "chevron.backward")
-    lazy var saveButton = makeButton(with: "arrow.down.square") // arrow.down.square.fill
+    lazy var saveButton = makeButton(with: "arrow.down.square")
     lazy var titleLabel = makeTitleLabel()
     
     override init(frame: CGRect) {

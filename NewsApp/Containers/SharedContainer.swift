@@ -1,4 +1,5 @@
 import Defaults
+import RealmSwift
 import Factory
 import Foundation
 import RealHTTP
@@ -19,5 +20,14 @@ extension SharedContainer {
     
     var app: Factory<AppRepository> {
         self { AppDataRepository(self.appRemoteDataSource()) }
+    }
+    
+    var realmManager: Factory<RealmDatabaseManager> {
+        self {
+            var realmConfigs = Realm.Configuration()
+            realmConfigs.deleteRealmIfMigrationNeeded = true
+            let realmManager = try! RealmDatabaseManager(configuration: realmConfigs)
+            return realmManager
+        }.singleton
     }
 }
