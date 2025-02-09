@@ -3,13 +3,6 @@ import UIKit
 final class NewsVC: BaseVC<NewsCV, NewsVM> {
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func setTargets() {
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         presentActivity()
         viewModel.getLatestNews()
     }
@@ -59,5 +52,7 @@ extension NewsVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.onDetailsAction?(viewModel.news[indexPath.row])
+    }
 }

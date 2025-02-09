@@ -9,8 +9,11 @@ final class NewsVM: ViewModelType {
     let errorSubject = PassthroughSubject<String, Never>()
     
     private var nextPage: String? = nil
-    var news: [NewsModel] = []
     var isFetching = false
+    
+    var news: [NewsModel] = []
+    
+    var onDetailsAction: ((_ news: NewsModel) -> Void)?
     
     @MainActor
     func getLatestNews() {

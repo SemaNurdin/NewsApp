@@ -21,6 +21,14 @@ final class MainNewsCoordinator: BaseCoordinator, MainNewsCoordinatorResult {
     // MARK: - Run current flow's controllers
     private func showNewsVC() {
         let module = factory.makeNewsVC()
-        router.setRootModule(module)
+        module.viewModel.onDetailsAction = showNewsDetailsVC
+        router.setRootModule(module, hideBar: false)
+    }
+    
+    private func showNewsDetailsVC(news: NewsModel) {
+        let module = factory.makeNewsDetailsVC(news: news)
+        module.viewModel.newsModel = news
+        module.viewModel.onBackAction = router.popModule
+        router.push(module, hideBottomBar: true)
     }
 }

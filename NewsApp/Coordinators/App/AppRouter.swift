@@ -85,7 +85,7 @@ final class AppRouter: NSObject, Router {
     func setRootModule(_ module: Presentable?, hideBar: Bool) {
         guard let controller = module?.toPresent() else { return }
         rootController?.setViewControllers([controller], animated: false)
-        rootController?.navigationBar.isHidden = true
+        rootController?.navigationBar.isHidden = hideBar
     }
     
     func setRootModule(_ module: Presentable?, hideBar: Bool, isAnimated: Bool) {

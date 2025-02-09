@@ -18,7 +18,9 @@ enum Constants {
         static let padding14: CGFloat = 14.adaptToScreenSize
         static let padding18: CGFloat = 18.adaptToScreenSize
         static let padding20: CGFloat = 20.adaptToScreenSize
+        static let padding28: CGFloat = 28.adaptToScreenSize
         static let padding32: CGFloat = 32.adaptToScreenSize
+        static let padding40: CGFloat = 40.adaptToScreenSize
     }
     
     enum SystemImages {

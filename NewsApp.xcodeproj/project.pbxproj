@@ -60,6 +60,7 @@
 		B2152BE82D572BA9004FD988 /* NewsCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2152BE42D572BA9004FD988 /* NewsCV.swift */; };
 		B2152BEC2D572F14004FD988 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2152BEB2D572F14004FD988 /* TableView.swift */; };
 		B2152BEE2D572F1F004FD988 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2152BED2D572F1F004FD988 /* TableViewCell.swift */; };
+		B27DC9882D58987E005A9006 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DC9872D58987E005A9006 /* NavigationBar.swift */; };
 		B285AA752D57753C0014FC98 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B285AA742D57753C0014FC98 /* Kingfisher */; };
 		B285AA902D5788160014FC98 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B285AA8F2D5788160014FC98 /* Realm */; };
 		B285AA922D5788160014FC98 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B285AA912D5788160014FC98 /* RealmSwift */; };
@@ -67,6 +68,10 @@
 		B285AA982D5797930014FC98 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285AA962D5797930014FC98 /* ToastView.swift */; };
 		B285AA992D5797930014FC98 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285AA972D5797930014FC98 /* Toast.swift */; };
 		B285AA9B2D5797E50014FC98 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285AA9A2D5797E50014FC98 /* UIApplication+Extensions.swift */; };
+		B285AAA12D57C4380014FC98 /* NewsDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285AA9D2D57C4380014FC98 /* NewsDetailsVM.swift */; };
+		B285AAA22D57C4380014FC98 /* NewsDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285AA9E2D57C4380014FC98 /* NewsDetailsBuilder.swift */; };
+		B285AAA32D57C4380014FC98 /* NewsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285AA9F2D57C4380014FC98 /* NewsDetailsVC.swift */; };
+		B285AAA42D57C4380014FC98 /* NewsDetailsCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B285AAA02D57C4380014FC98 /* NewsDetailsCV.swift */; };
 		B2ECAB802D576A950020CF64 /* RealmList+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAB7F2D576A950020CF64 /* RealmList+Extensions.swift */; };
 		B2ECAB822D576B290020CF64 /* ActivityPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAB812D576B290020CF64 /* ActivityPresentable.swift */; };
 		B2ECAB882D576B470020CF64 /* ActivityIndicatorViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ECAB842D576B470020CF64 /* ActivityIndicatorViewStyle.swift */; };
@@ -129,10 +134,15 @@
 		B2152BE42D572BA9004FD988 /* NewsCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCV.swift; sourceTree = "<group>"; };
 		B2152BEB2D572F14004FD988 /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableView.swift; path = "../../../../Axel/step365-ios/Step365/Components/TableView.swift"; sourceTree = "<group>"; };
 		B2152BED2D572F1F004FD988 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B27DC9872D58987E005A9006 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		B285AA932D5797210014FC98 /* ToastPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastPresentable.swift; sourceTree = "<group>"; };
 		B285AA962D5797930014FC98 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		B285AA972D5797930014FC98 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		B285AA9A2D5797E50014FC98 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		B285AA9D2D57C4380014FC98 /* NewsDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsVM.swift; sourceTree = "<group>"; };
+		B285AA9E2D57C4380014FC98 /* NewsDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsBuilder.swift; sourceTree = "<group>"; };
+		B285AA9F2D57C4380014FC98 /* NewsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsVC.swift; sourceTree = "<group>"; };
+		B285AAA02D57C4380014FC98 /* NewsDetailsCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsCV.swift; sourceTree = "<group>"; };
 		B2ECAB7F2D576A950020CF64 /* RealmList+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmList+Extensions.swift"; sourceTree = "<group>"; };
 		B2ECAB812D576B290020CF64 /* ActivityPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityPresentable.swift; sourceTree = "<group>"; };
 		B2ECAB842D576B470020CF64 /* ActivityIndicatorViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewStyle.swift; sourceTree = "<group>"; };
@@ -269,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				B2152BE02D572B84004FD988 /* News */,
+				B285AA9C2D57C4180014FC98 /* NewsDetails */,
 				B2152BC22D55E6F6004FD988 /* Tabbar */,
 			);
 			path = Features;
@@ -277,8 +288,9 @@
 		B2152B732D55CDC1004FD988 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B285AA952D5797930014FC98 /* Toast */,
+				B27DC9872D58987E005A9006 /* NavigationBar.swift */,
 				B2ECAB942D576EFA0020CF64 /* ResponseLogValidator.swift */,
+				B285AA952D5797930014FC98 /* Toast */,
 				B2ECAB832D576B470020CF64 /* ActivityIndicator */,
 				B2152B712D55CD9B004FD988 /* Resource */,
 				B2152B7D2D55CF01004FD988 /* Base */,
@@ -451,6 +463,17 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		B285AA9C2D57C4180014FC98 /* NewsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				B285AA9F2D57C4380014FC98 /* NewsDetailsVC.swift */,
+				B285AAA02D57C4380014FC98 /* NewsDetailsCV.swift */,
+				B285AA9D2D57C4380014FC98 /* NewsDetailsVM.swift */,
+				B285AA9E2D57C4380014FC98 /* NewsDetailsBuilder.swift */,
+			);
+			path = NewsDetails;
+			sourceTree = "<group>";
+		};
 		B2ECAB832D576B470020CF64 /* ActivityIndicator */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +574,7 @@
 			files = (
 				B2152B6E2D55CCEA004FD988 /* Router.swift in Sources */,
 				B2152B812D55CF01004FD988 /* BaseVC.swift in Sources */,
+				B285AAA22D57C4380014FC98 /* NewsDetailsBuilder.swift in Sources */,
 				B2152BB02D55E202004FD988 /* AppRouter.swift in Sources */,
 				B2152BA52D55D775004FD988 /* AppDataRepository.swift in Sources */,
 				B2152BE52D572BA9004FD988 /* NewsVM.swift in Sources */,
@@ -562,14 +586,17 @@
 				B2152B8A2D55D1A2004FD988 /* Initialize.swift in Sources */,
 				B20CE4052D5731CD00CDEFC9 /* ModuleBuilder.swift in Sources */,
 				B2ECAB8B2D576B470020CF64 /* ActivityIndicatorView.swift in Sources */,
+				B285AAA32D57C4380014FC98 /* NewsDetailsVC.swift in Sources */,
 				B2152BBC2D55E3EC004FD988 /* TabbarCoordinatorResult.swift in Sources */,
 				B2ECAB892D576B470020CF64 /* ActivityIndicatorOverlayView.swift in Sources */,
 				B2ECAB952D576EFA0020CF64 /* ResponseLogValidator.swift in Sources */,
+				B285AAA12D57C4380014FC98 /* NewsDetailsVM.swift in Sources */,
 				B2152BAF2D55E202004FD988 /* AppCoordinator.swift in Sources */,
 				B2152BE62D572BA9004FD988 /* NewsBuilder.swift in Sources */,
 				B2152BBA2D55E3EC004FD988 /* TabbarCoordinator.swift in Sources */,
 				B2ECAB8D2D576B730020CF64 /* InteractionBlockable.swift in Sources */,
 				B2152B9E2D55D642004FD988 /* SharedContainer.swift in Sources */,
+				B285AAA42D57C4380014FC98 /* NewsDetailsCV.swift in Sources */,
 				B2152BC72D55E6F6004FD988 /* TabbarVC.swift in Sources */,
 				B20CE4172D5766D500CDEFC9 /* RealHTTP+Extension.swift in Sources */,
 				B2152BB52D55E39F004FD988 /* CoordinatorFactory.swift in Sources */,
@@ -595,6 +622,7 @@
 				B285AA942D5797210014FC98 /* ToastPresentable.swift in Sources */,
 				B2152BB32D55E23E004FD988 /* BaseCoordinator.swift in Sources */,
 				B2152BD12D55E7D3004FD988 /* UIDevice+Extensions.swift in Sources */,
+				B27DC9882D58987E005A9006 /* NavigationBar.swift in Sources */,
 				B2152BE82D572BA9004FD988 /* NewsCV.swift in Sources */,
 				B2ECAB822D576B290020CF64 /* ActivityPresentable.swift in Sources */,
 				B20CE4152D57668800CDEFC9 /* AppRequests.swift in Sources */,
