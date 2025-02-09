@@ -37,6 +37,11 @@ final class AppCoordinatorFactory: CoordinatorFactory {
         let factory = MainNewsFactory()
         return MainNewsCoordinator(router: router(navController), factory: factory, mainRouter: mainRouter)
     }
+    
+    func makeSavedNewsCoordinator(navController: BaseNC?, mainRouter: Router) -> Coordinator & SavedNewsCoordinatorResult {
+        let factory = SavedNewsFactory()
+        return SavedNewsCoordinator(router: router(navController), factory: factory, mainRouter: mainRouter)
+    }
 }
 extension AppCoordinatorFactory {
     private func router(_ navController: BaseNC?) -> Router {

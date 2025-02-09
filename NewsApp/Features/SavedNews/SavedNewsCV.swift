@@ -1,6 +1,6 @@
 import UIKit
 
-public final class NewsCV: UIView {
+public final class SavedNewsCV: UIView {
     lazy var tableView = makeTableView()
     lazy var emptyPlaceholderView = makeEmptyPlaceholderView()
     
@@ -21,7 +21,7 @@ public final class NewsCV: UIView {
 }
 
 // MARK: - Setup subviews and constraints
-extension NewsCV: Customizable {
+extension SavedNewsCV: Customizable {
     public func setSubviews() {
         addSubview(tableView)
     }
@@ -40,7 +40,7 @@ extension NewsCV: Customizable {
     }
 }
 
-private extension NewsCV {
+private extension SavedNewsCV {    
     func makeTableView() -> TableView {
         let tableView = TableView(style: .plain,
                                   backgroundColor: .clear,
@@ -51,7 +51,7 @@ private extension NewsCV {
     
     func makeEmptyPlaceholderView() -> EmptyPlaceholderView {
         let view = EmptyPlaceholderView()
-        view.emptyPlaceholderType = .news
+        view.emptyPlaceholderType = .savedNews
         return view
     }
 }

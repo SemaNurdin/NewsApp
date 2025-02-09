@@ -27,7 +27,7 @@ final class NewsVM: ViewModelType {
                 nextPage = res.nextPage
                 successSubject.send(true)
             } catch {
-                errorSubject.send("News limit reached!")
+                errorSubject.send(error.localizedDescription)
             }
             isFetching = false
         }

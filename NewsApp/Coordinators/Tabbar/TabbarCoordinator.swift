@@ -21,6 +21,7 @@ class TabbarCoordinator: BaseCoordinator, TabbarCoordinatorResult {
     private func setCallbacksToTabs() {
         tabbarVC.onViewDidLoad = runMainNewsFlow()
         tabbarVC.onMainNewsFlowSelect = runMainNewsFlow()
+        tabbarVC.onSavedNewsFlowSelect = runSavedNewsFlow()
     }
     
     private func runMainNewsFlow() -> ((BaseNC) -> Void) {
@@ -36,16 +37,16 @@ class TabbarCoordinator: BaseCoordinator, TabbarCoordinatorResult {
         }
     }
     
-//    private func runSettingsFlow() -> ((BaseNC) -> Void) {
-//        return { [unowned self] navController in
-//            if navController.viewControllers.isEmpty {
-//                var settingsCoordinator = self.coordinatorFactory.makeSettingsCoordinator(navController: navController, mainRouter: mainRouter)
-//                settingsCoordinator.finishFlow = { [weak self] in
-//                    self?.finishFlow?()
-//                }
-//                self.addDependency(settingsCoordinator)
-//                settingsCoordinator.start()
-//            }
-//        }
-//    }
+    private func runSavedNewsFlow() -> ((BaseNC) -> Void) {
+        return { [unowned self] navController in
+            if navController.viewControllers.isEmpty {
+                var savedNewsCoordinator = self.coordinatorFactory.makeSavedNewsCoordinator(navController: navController, mainRouter: mainRouter)
+                savedNewsCoordinator.finishFlow = { [weak self] in
+                    self?.finishFlow?()
+                }
+                self.addDependency(savedNewsCoordinator)
+                savedNewsCoordinator.start()
+            }
+        }
+    }
 }

@@ -27,6 +27,7 @@ final class NewsVC: BaseVC<NewsCV, NewsVM> {
                 guard let self = self else { return }
                 self.dismissActivity()
                 self.presentToast(with: error, messageType: .error)
+                self.contentView.tableView.changePlaceholder(viewModel.news.isEmpty ? .visible : .hidden)
             }
             .store(in: &bag)
     }
